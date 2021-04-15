@@ -13,20 +13,24 @@ ProductTag.init(
       autoIncrement: true,
     },
 
-    product_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'product',
+        key: 'id',
+      },
     },
 
-    price: {
-      type: DataTypes.DECIMAL,
-      allowNull: false,
-      validate: {
-        isDecimal: true,
-      }
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'tag',
+        key: 'id',
+      },
     },
 
-  },
+
+  },  
   {
     sequelize,
     timestamps: false,
