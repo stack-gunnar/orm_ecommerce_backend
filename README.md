@@ -16,4 +16,4 @@
   npm i
   ```
   ## Usage
-  `npm run seed` to seed the database and `npm start` to start the server 
+  `node seeds/seed.js` to seed the database and `node server.js` to start the server 
